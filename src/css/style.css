@@ -1,0 +1,117 @@
+/* custom.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+  font-family: "Bebas Neue", serif;
+  letter-spacing: 3px;
+}
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('../images/bg.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    overflow: hidden;
+    font-family: "Bebas Neue", serif;
+    letter-spacing: 3px;
+    text-shadow: 4px 4px 6px rgba(0, 121, 36, 0.5);
+    background-attachment: fixed;
+    min-height: 100vh; /* Setiap section memenuhi layar penuh */
+  }
+
+  .bg-patner{
+    background-color: #487e67;
+    
+  }
+
+
+  .font-p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 200;
+  }
+
+  
+
+ 
+
+ 
+  .hero-overlay {
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(1, 44, 10, 0.413), rgba(2, 50, 21, 0.39));
+    z-index: 1;
+  }
+  .hero-overlay-patner {
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(3, 198, 152, 0.664), rgba(2, 115, 102, 0.39));
+    z-index: 1;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: left;
+  }
+  
+  .navbar {
+    backdrop-filter: blur(1px);
+    background: rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .navbar:hover {
+    background: rgba(2, 125, 92, 0.358);
+  }
+  
+  .navbar-link {
+    color: #ffffff;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-link:hover {
+    color: #00fb86;
+  }
+  button:focus {
+    outline: none;
+  }
+
+  .hover-effect {
+    transition: color 0.3s ease;
+  }
+  
+  .hover-effect:hover {
+    color: #ff6347; /* Warna hover */
+  }
+
+  .fullscreen-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #02854a; /* Warna background solid */
+    z-index: 50;
+    color: #00a960;
+  }
+
+  .nav-bg-nav{
+    background-color: #00ff9d;
+    width: 100%;
+    height: 100%;
+  }
+  
+  

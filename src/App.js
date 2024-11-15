@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Hero from "./components/HeroSection";
+import Home from "./pages/Home";
+import Schedule from "./pages/Schedule";
+import Team from "./pages/Team";
+import Media from "./pages/Media";
+import Shop from "./pages/Shop";
+import MavsTV from "./pages/MavsTV";
+import MavsInsider from "./pages/MavsInsider";
+import Partner from "./components/Partner";
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        {/* Halaman utama yang memuat Hero, Partner, dan Blog */}
+        <Route 
+          path="/" 
+          element={
+            <>
+              <Hero />
+              <Partner />
+              
+            </>
+          }
+        />
+        <Route path="/schedule" element={<Schedule />} />
+        <Route path="/team" element={<Team />} />
+        <Route path="/media" element={<Media />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/mavstv" element={<MavsTV />} />
+        <Route path="/mavsinsider" element={<MavsInsider />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
